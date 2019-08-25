@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { BaseApiConfig } from './api-config.interface';
 import { ApiService } from './api.service';
 import { ApiConfig } from './api-config.token';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
-  imports: [CommonModule]
+  imports: [CommonModule, HttpClientModule]
 })
 export class ApiModule {
 
