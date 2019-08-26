@@ -156,6 +156,42 @@
           "styleext": "scss"
         }
       }
+    },
+    "api-auth": {
+      "root": "libs/api-auth",
+      "sourceRoot": "libs/api-auth/src",
+      "projectType": "library",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "main": "libs/api/src/index.ts",
+            "outputPath": "dist/libs/api-auth",
+            "tsConfig": "libs/api-auth/tsconfig.lib.json",
+            "assets": [
+              "libs/api-auth/src/package.json"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/api-auth/tsconfig.lib.json",
+              "libs/api-auth/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/api-auth/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/api-auth/jest.config.js",
+            "tsConfig": "libs/api-auth/tsconfig.spec.json"
+          }
+        }
+      }
     }
   },
   "cli": {

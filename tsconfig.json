@@ -3,7 +3,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "sourceMap": true,
-    "declaration": false,
+    "declaration": true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@polyrithm/api": ["libs/api/src/index.ts"]
+      "@polyrithm/api": ["libs/api/src/index.ts"],
+      "@polyrithm/api-auth": ["libs/api-auth/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
