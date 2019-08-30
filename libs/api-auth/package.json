@@ -1,11 +1,19 @@
 {
   "name": "@polyrithm/api-auth",
-  "version": "1.1.0",
+  "version": "1.6.0",
   "description": "",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "src/**/*"
+  ],
   "author": "Nivrith <nivrithgomatam@gmail.com",
   "repository": {
     "url": "https://github.com/Polyrithm/polyrithm",
     "directory": "libs/api-auth"
+  },
+  "scripts": {
+    "build": "npx tsc tsconfig.lib.json"
   },
   "license": "MIT",
   "keywords": [
