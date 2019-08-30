@@ -1,8 +1,38 @@
-# api
+<p align="center">
+  <a href="http://nestjs.com/" target="blank">
+    <img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" />
+  </a>
+</p>
 
-Shareable JWT API Authentication service for NestJS Applications
+<p align="center">
+  Pluggable JWT API Authentication Module for NestJS Applications
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/~polyrithm"><img src="https://img.shields.io/npm/v/@polyrithm/api-auth.svg" alt="NPM Version" /></a>
+  <a href="https://www.npmjs.com/~polyrithm"><img src="https://img.shields.io/npm/l/@polyrithm/api-auth.svg" alt="Package License" /></a>
+  <a href="https://www.npmjs.com/~polyrithm"><img src="https://img.shields.io/npm/dm/@polyrithm/api-auth.svg" alt="NPM Downloads" /></a>
+</p>
+
+## Installation
+
+This module has peer dependencies of `@nestjs/common, @nestjs/core, @nestjs/typeorm` so make sure you have these packages installed before attempting to user `@polyrithm/api-auth`
+
+```bash
+npm install --save @polyrithm/api-auth
+```
+
+or
+
+```bash
+yarn add @polyrithm/api-auth
+```
 
 ## Usage
+
+- Import the AuthModule into the root AppModule
+- Set the secret and expiry
+- Add User Entity from @polyrithm/api-auth to `Entities` array in typeorm configuration
 
 ```ts
 //app.module.ts
@@ -51,6 +81,7 @@ By default all routes are guarded. We prefer using an inversion principle and ma
 the controller or handlers which expose public routes
 
 ```ts
+
 // app.controller.ts
 import { Controller, Get } from '@nestjs/common';
 
@@ -68,6 +99,12 @@ export class AppController {
   getData(): Message {
     return this.appService.getData();
   }
+
+  @Get('example-guarded-route')
+  sayHello(): Message {
+
+  }
+
 }
 
 

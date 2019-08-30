@@ -3,7 +3,21 @@
   "version": "1.1.0",
   "description": "",
   "author": "Nivrith <nivrithgomatam@gmail.com",
+  "repository": {
+    "url": "https://github.com/Polyrithm/polyrithm",
+    "directory": "libs/api-auth"
+  },
   "license": "MIT",
+  "keywords": [
+    "nestjs",
+    "authentication",
+    "jwt-authentication",
+    "jwt auth",
+    "nestjs auth",
+    "nest auth",
+    "passport-jwt",
+    "auth"
+  ],
   "peerDependencies": {
     "@nestjs/common": "^6.5.3",
     "@nestjs/core": "^6.5.3",
