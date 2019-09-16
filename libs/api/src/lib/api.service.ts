@@ -36,22 +36,22 @@ export class ApiService {
     } ).pipe( catchError( this.formatErrors ) );
   }
 
-  put<T>( url: string, body: any = {} ): Observable<any> {
+  put<T>( url: string, body: any = {} ): Observable<T> {
     return this.http
-      .put( `${this.config.baseUrl}${url}`, body, { headers: this.headers } )
+      .put<T>( `${this.config.baseUrl}${url}`, body, { headers: this.headers } )
       .pipe( catchError( this.formatErrors ) );
   }
 
 
-  post<T>( url: string, body: any = {} ): Observable<any> {
+  post<T>( url: string, body: any = {} ): Observable<T> {
     return this.http
-      .post( `${this.config.baseUrl}${url}`, body, { headers: this.headers } )
+      .post<T>( `${this.config.baseUrl}${url}`, body, { headers: this.headers } )
       .pipe( catchError( this.formatErrors ) );
   }
 
-  delete<T>( url: string ): Observable<any> {
+  delete<T>( url: string ): Observable<T> {
     return this.http
-      .delete( `${this.config.baseUrl}${url}`, { headers: this.headers } )
+      .delete<T>( `${this.config.baseUrl}${url}`, { headers: this.headers } )
       .pipe( catchError( this.formatErrors ) );
   }
 }
