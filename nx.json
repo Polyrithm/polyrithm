@@ -19,6 +19,9 @@
     },
     "api-auth": {
       "tags": []
+    },
+    "click-prevent": {
+      "tags": []
     }
   }
 }

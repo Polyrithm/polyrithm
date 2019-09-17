@@ -1,0 +1,8 @@
+{
+  "name": "@polyrithm/click-prevent",
+  "version": "0.0.7",
+  "peerDependencies": {
+    "@angular/common": "^8.1.1",
+    "@angular/core": "^8.1.1"
+  }
+}

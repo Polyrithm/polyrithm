@@ -169,9 +169,7 @@
             "main": "libs/api/src/index.ts",
             "outputPath": "dist/libs/api-auth",
             "tsConfig": "libs/api-auth/tsconfig.lib.json",
-            "assets": [
-              "libs/api-auth/src/package.json"
-            ]
+            "assets": ["libs/api-auth/src/package.json"]
           }
         },
         "lint": {
@@ -190,6 +188,44 @@
             "jestConfig": "libs/api-auth/jest.config.js",
             "tsConfig": "libs/api-auth/tsconfig.spec.json"
           }
+        }
+      }
+    },
+    "click-prevent": {
+      "projectType": "library",
+      "root": "libs/click-prevent",
+      "sourceRoot": "libs/click-prevent/src",
+      "prefix": "polyrithm",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/click-prevent/tsconfig.lib.json",
+            "project": "libs/click-prevent/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/click-prevent/tsconfig.lib.json",
+              "libs/click-prevent/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/click-prevent/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/click-prevent/jest.config.js",
+            "tsConfig": "libs/click-prevent/tsconfig.spec.json",
+            "setupFile": "libs/click-prevent/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
         }
       }
     }
