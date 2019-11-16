@@ -36,6 +36,10 @@ export class UserRepository extends Repository<User> {
     }
   }
 
+  public async resetPassword(email: string) {
+
+  }
+
   private async hashPassword(password: string, salt:string) {
     return bcrypt.hash(password, salt);
   }

@@ -6,6 +6,7 @@ import { AuthCredentialsDto } from '../dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { UserRepository } from '../repositories/user.repository';
 import { JwtPayload } from '../interfaces/jwt-payload.interface';
+import { ResetPasswordDto } from '../dto/auth/reset-password.request.dto';
 
 @Injectable()
 export class AuthService {
@@ -27,4 +28,18 @@ export class AuthService {
   public async register(authCredentials: AuthCredentialsDto) {
     return this.userRepository.register(authCredentials);
   }
+
+  public async resetPassword(request: ResetPasswordDto ) {
+    return this.userRepository.resetPassword(request.email);
+  }
+
+  public async verifyEmail(){
+
+  }
+
+  public async resendVerification() {
+
+  }
+
+
 }

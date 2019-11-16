@@ -4,8 +4,9 @@ import { Directive, Output, EventEmitter, Renderer2, ElementRef, OnInit, OnDestr
   selector: '[click.prevent]'
 })
 export class ClickPreventDirective implements OnInit, OnDestroy {
-  @Output("click.prevent") stopPropEvent = new EventEmitter();
-  unsubscribe;
+
+  @Output("click.prevent")
+  stopPropEvent = new EventEmitter();
 
   constructor(private renderer: Renderer2, private element: ElementRef) {
   }
@@ -21,7 +22,6 @@ export class ClickPreventDirective implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.unsubscribe();
   }
 
 }
