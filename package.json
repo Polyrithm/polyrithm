@@ -44,7 +44,7 @@
     "bcrypt": "^3.0.6",
     "class-validator": "^0.10.0",
     "core-js": "^2.5.4",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "passport-jwt": "^4.0.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
