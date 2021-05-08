@@ -80,12 +80,12 @@
     "ts-node": "~7.0.0",
     "tsickle": "^0.35.0",
     "tslint": "~5.11.0",
-    "typeorm": "^0.2.18",
+    "typeorm": "^0.2.25",
     "typescript": "~3.4.5",
     "webpack": "^4.39.2"
   },
   "peerDependencies": {
     "@nestjs/common": "^6.5.3",
-    "typeorm": "^0.2.18"
+    "typeorm": "^0.2.25"
   }
 }
