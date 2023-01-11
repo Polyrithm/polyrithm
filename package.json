@@ -42,7 +42,7 @@
     "@ngrx/store": "^8.2.0",
     "@nrwl/angular": "8.4.12",
     "bcrypt": "^3.0.6",
-    "class-validator": "^0.10.0",
+    "class-validator": "^0.14.0",
     "core-js": "^2.5.4",
     "lodash": "^4.17.15",
     "passport-jwt": "^4.0.0",
